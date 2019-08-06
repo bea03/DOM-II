@@ -3,9 +3,15 @@
 const navParent = document.querySelector('.nav');
 const navLink = document.querySelectorAll('.nav .nav-link');
 
+    navParent.addEventListener('click', (event) => {
+        event.target.style.backgroundColor = '#17A2B8';
+    });
+    
     navLink.forEach( (navLink) => {
         navLink.addEventListener('click', (event) => {
             event.target.style.color = '#17A2B8';
+            event.preventDefault();
+            event.stopPropagation();
         });
 
         navLink.addEventListener('mouseover', (event) => {
