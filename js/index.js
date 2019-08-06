@@ -46,4 +46,26 @@ window.addEventListener('scroll', (event) => {
 
 window.addEventListener('resize', (event) => {
     homeContainer.style.backgroundColor = '#FFEBCD'; //six
-})
+});
+
+window.addEventListener('load', (event) => {  //seven
+    alert("Page Loaded!!");
+});
+
+const paragraphSelect = document.querySelectorAll('p');
+
+paragraphSelect.forEach ((paragraphSelect) => {
+    paragraphSelect.addEventListener('copy', (event) => {  //eight
+        paragraphSelect.textContent = "This text was copied!";  
+    });
+});
+
+const introImg = document.querySelector('.intro img');
+
+introImg.addEventListener('dragstart', (event) => {
+    alert("dragging!"); //nine
+});
+
+introImg.addEventListener('dragend', (event) => {
+    alert("over!!"); //ten
+});
